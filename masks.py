@@ -33,14 +33,10 @@ def generate_masks(images_dir, labels_dir, masks_dir):
             label_file = os.path.join(labels_dir, image_file.replace('.jpg', '.txt'))
 
             if os.path.exists(label_file):
-                print(f"Processing {image_file}...")
                 image = cv2.imread(image_path)
-                mask = parse_label_file(label_file, image.shape)
+                mask = parse_label_file(label_file, image.shape[:2])  # Use only width and height for image shape
 
-                # Debug: Print mask information
-                print(f"Mask shape: {mask.shape}, min: {np.min(mask)}, max: {np.max(mask)}")
-
-                # Save mask only if it's not empty (not all black)
+                # Ensure mask is not empty (not all black)
                 if np.max(mask) > 0:
                     mask_filename = os.path.join(masks_dir, image_file.replace('.jpg', '_mask.jpg'))
                     cv2.imwrite(mask_filename, mask)
