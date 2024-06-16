@@ -36,13 +36,12 @@ def generate_masks(images_dir, labels_dir, masks_dir):
                 image = cv2.imread(image_path)
                 mask = parse_label_file(label_file, image.shape[:2])  # Use only width and height for image shape
 
-                # Ensure mask is not empty (not all black)
-                if np.max(mask) > 0:
-                    mask_filename = os.path.join(masks_dir, image_file.replace('.jpg', '_mask.jpg'))
-                    cv2.imwrite(mask_filename, mask)
-                    print(f"Mask generated and saved for {image_file}")
-                else:
-                    print(f"Skipping {image_file} due to empty mask")
+                # Save the mask regardless of whether it is empty or not
+                mask_filename = os.path.join(masks_dir, image_file.replace('.jpg', '_mask.jpg'))
+                cv2.imwrite(mask_filename, mask)
+                print(f"Mask generated and saved for {image_file}")
+            else:
+                print(f"Skipping {image_file} because corresponding label file does not exist")
 
 # Paths configuration (adjust these paths according to your folder structure)
 images_folder = r'E:\Sid Folder\Random Python Scripts\Farm Land Detection\farm_data\images'
