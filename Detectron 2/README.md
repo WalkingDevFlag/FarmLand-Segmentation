@@ -1,4 +1,4 @@
-## Farmland Segmentation using Detectron 2
+# Farmland Segmentation using Detectron 2
 
 ## Description
 
