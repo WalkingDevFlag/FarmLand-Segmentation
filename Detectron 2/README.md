@@ -6,6 +6,8 @@ This project focuses on segmenting farmland areas using the Detectron 2 deep lea
 
 The dataset used for this project is available at: [https://universe.roboflow.com/farmland-wdqqo/detectron-2-dataset](https://universe.roboflow.com/farmland-wdqqo/detectron-2-dataset)[1].
 
+This Dataset was manually annotated by me as at the time there was no dataset available (i couldn't find any)
+
 ## Table of Contents
 
 - [Installation](#installation)
