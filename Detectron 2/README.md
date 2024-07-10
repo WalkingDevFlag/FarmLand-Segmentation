@@ -4,7 +4,7 @@
 
 This project focuses on segmenting farmland areas using the Detectron 2 deep learning framework. It involves training a model to identify and segment farmland regions in images.
 
-The dataset used for this project is available at: [https://universe.roboflow.com/farmland-wdqqo/detectron-2-dataset]([https://universe.roboflow.com/farmland-wdqqo/detectron-2-ftdoh/dataset/2])[1].
+The dataset used for this project is available at: [https://universe.roboflow.com/farmland-wdqqo/detectron-2-dataset](https://universe.roboflow.com/farmland-wdqqo/detectron-2-ftdoh/dataset/2)[1].
 
 This Dataset was manually annotated by me as at the time there was no dataset available (i couldn't find any)
 
