@@ -1,0 +1,32 @@
+1) Create a Conda environment:
+conda create -n detectron_env python=3.8
+
+2) Activate the environment:
+conda activate detectron_env
+
+3) Install PyTorch and related dependencies:
+conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
+
+4) Install Cython:
+conda install cython
+
+5) Clone the Detectron 2 repository:
+git clone https://github.com/facebookresearch/detectron2.git
+
+6) Install OpenCV:
+pip install opencv-python
+
+7) Install PyTorch with CUDA support:
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+8) Navigate to the Detectron 2 directory:
+cd detectron2
+
+9) Install Detectron 2:
+pip install -e .
+
+Using Anaconda Virtual Env inside a jupyter notebook
+1) conda activate detectron_env
+2) conda install -c anaconda ipykernel
+3) python -m ipykernel install --user --name=detectron_env
+4) jupyter notebook
