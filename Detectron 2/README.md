@@ -23,6 +23,15 @@ This Dataset was manually annotated by me as at the time there was no dataset av
 - PyTorch
 - Detectron 2
 - OpenCV
+- NumPy
+- OS
+- Rasterio
+- Matplotlib
+- Shapely
+- GeoPandas
+- JSON
+- Random
+- YAML
 
 ### Steps
 
